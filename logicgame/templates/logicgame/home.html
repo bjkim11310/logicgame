@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Logic game</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Tajawal|Ubuntu+Mono&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="header"><a href="/">Logic Game</a></div>
+    <div class="content">
+        {% block content %}
+        <a class="beginner" href="{% url 'beginner' %}">Beginner</a>
+        <a class="advanced" href="{% url 'advanced' %}">Advanced</a>
+        {% endblock %}
+        {% block script %}
+        {% endblock %}
+    </div>
+</body>
+</html>

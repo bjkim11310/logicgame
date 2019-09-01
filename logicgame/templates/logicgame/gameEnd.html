@@ -1,0 +1,9 @@
+{% extends 'logicgame/home.html' %}
+
+{% block content %}
+<h1>Enter user ID</h1>
+<form method="POST" >{% csrf_token %}
+    {{ form.as_p }}
+    <button class="save btn btn-default" type="submit">Save</button>
+</form>
+{% endblock %}

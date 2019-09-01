@@ -1,0 +1,13 @@
+{% extends 'logicgame/home.html' %}
+{% load static %}
+
+{% block script %}
+<script src="{% static 'js/numMem.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="NMboard"></div>
+<form id="form" action="Number%20Memorization/rankInput" method="post">{% csrf_token %}
+    <input id="input" type="hidden" name="score">
+</form>
+{% endblock %}

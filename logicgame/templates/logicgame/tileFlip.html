@@ -1,0 +1,14 @@
+{% extends 'logicgame/home.html' %}
+{% load static %}
+
+{% block script %}
+<script src="{% static 'js/tileFlip.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="TFboard"></div>
+<form id="form" action="Tile%20Flip/rankInput" method="post">{% csrf_token %}
+    <input id="input" type="hidden" name="score">
+</form>
+{% endblock %}
+

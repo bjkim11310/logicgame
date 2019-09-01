@@ -1,0 +1,9 @@
+{% extends 'logicgame/home.html' %}
+
+{% block content %}
+<div class="container">
+    {% for game in games %}
+        <a href="{% url 'startGame' gameName=game.name %}">{{ game.name }}</a>
+    {% endfor %}
+</div>
+{% endblock %}

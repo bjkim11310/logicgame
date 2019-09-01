@@ -1,0 +1,14 @@
+{% extends 'logicgame/home.html' %}
+
+{% block content %}
+<div class="ranks">
+{% for rank in ranks %}
+    <div class="stat">
+        <div>{{ forloop.counter }}</div>
+        <div>{{ rank.userID }}</div>
+        <div>{{ rank.score }}</div>
+        <div>{{ rank.date }}</div>
+    </div>
+{% endfor %}
+</div>
+{% endblock %}
