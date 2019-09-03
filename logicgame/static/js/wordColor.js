@@ -63,7 +63,8 @@ document.addEventListener('keydown', (event)=>{
                     score--;
                 }
                 scoreDisplay.innerText = 'Score: ' + score;
-                getWord(word);
+                word.style.color = '#ffffff';
+                setTimeout(()=>getWord(word), 50);
             }
         })
     }
@@ -71,7 +72,6 @@ document.addEventListener('keydown', (event)=>{
 
 
 let getWord = (word)=>{
-    word.innerText = '';
     let textIndex = Math.floor(Math.random()*4);
     colors[4] = colors[textIndex];
     let colorIndex = Math.floor(Math.random()*5);
