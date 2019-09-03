@@ -37,7 +37,7 @@ def rankInput(request, gameName):
             rank = form.save(commit=False)
             rank.date = timezone.now()
             rank.gameName = MyGame.objects.get(name__exact=gameName)
-            rank.score = request.POST.get('score'), gameName
+            rank.score = request.POST.get('score', gameName)
             rank.save()
             return redirect('rankDisplay', gameName=rank.gameName)
     else:
