@@ -73,7 +73,11 @@ document.addEventListener('keydown', (event)=>{
                 else if(event.keyCode==40 && shapeMatch && !colorMatch) score++;
                 else score--;
                 scoreDisplay.innerText = 'Score: ' + score;
-                flip();
+                leftCtx.fillStyle = '#ffffff';
+                leftCtx.fillRect(0, 0, left.width, left.height);
+                rightCtx.fillStyle = '#ffffff';
+                rightCtx.fillRect(0, 0, right.width, right.height);
+                setTimeout(()=>flip(), 50);
             }
         })
     }
@@ -83,11 +87,6 @@ document.addEventListener('keydown', (event)=>{
 let flip = ()=>{
     colorMatch = false;
     shapeMatch = false;
-
-    leftCtx.fillStyle = '#ffffff';
-    leftCtx.fillRect(0, 0, left.width, left.height);
-    rightCtx.fillStyle = '#ffffff';
-    rightCtx.fillRect(0, 0, right.width, right.height);
 
     leftColorIndex = Math.floor(Math.random()*4);
     rightColorIndex = Math.floor(Math.random()*4);

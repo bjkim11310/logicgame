@@ -240,7 +240,7 @@ a {
 
 .PCboard > canvas {
     width: calc(100vw - 80px);
-    height: calc(100vh - 300px);
+    height: calc(100vh - 315px);
     margin: 30px;
     border: 1px solid #000000;
 }
