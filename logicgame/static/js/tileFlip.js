@@ -63,7 +63,7 @@ startbtn.addEventListener('click', (event)=>{
                         completed++;
                         //go to rankInput and give score
                         if(completed==8){
-                            let score = Math.round(time);
+                            let score = Math.round(1000/time);
                             let form = document.getElementById('form');
                             let input = document.getElementById('input');
                             input.setAttribute('value', score);
