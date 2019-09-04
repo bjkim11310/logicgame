@@ -21,7 +21,7 @@ board.appendChild(div);
 let score = 0;
 let time = 15;
 let match = false;
-begun = false;
+let begun = false;
 
 document.addEventListener('keydown', (event)=>{
     if(!begun && event.keyCode==32){
