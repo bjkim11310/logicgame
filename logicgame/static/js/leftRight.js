@@ -55,7 +55,6 @@ document.addEventListener('keydown', (event)=>{
             time-=1;
             //go to rankInput and give score
             if(time==0){
-                console.log('hi');
                 let form = document.getElementById('form');
                 let input = document.getElementById('input');
                 input.setAttribute('value', score);

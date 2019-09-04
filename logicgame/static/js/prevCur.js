@@ -19,7 +19,7 @@ let ctx = card.getContext('2d');
 board.appendChild(card);
 
 let score = 0;
-let time = 0;
+let time = 45;
 let colorMatch = false;
 let shapeMatch = false;
 let prevShapeIndex;
@@ -85,7 +85,6 @@ document.addEventListener('keydown', ()=>{
             time-=1;
             //go to rankInput and give score
             if(time==0){
-                console.log('hi');
                 let form = document.getElementById('form');
                 let input = document.getElementById('input');
                 input.setAttribute('value', score);
